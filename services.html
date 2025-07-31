@@ -264,12 +264,12 @@
                 <div class="bg-blue-600 rounded-2xl p-8 md:p-12 text-center text-white">
                     <h2 class="text-3xl font-bold">Looking for a Service Not Listed?</h2>
                     <p class="mt-4 max-w-2xl mx-auto opacity-90">My expertise is broad. If you have a specific digital marketing need, I'd love to hear about it. Describe your project, and I'll let you know how I can help you achieve your goals.</p>
-                    <form class="mt-8 max-w-xl mx-auto">
+                    <form action="https://formspree.io/f/xanbbdop" method="POST" class="mt-8 max-w-xl mx-auto">
                         <div class="grid sm:grid-cols-2 gap-4">
-                            <input type="text" placeholder="Your Name" class="p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white">
-                            <input type="email" placeholder="Your Email" class="p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                            <input type="text" name="name" placeholder="Your Name" required class="p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                            <input type="email" name="email" placeholder="Your Email" required class="p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white">
                         </div>
-                        <textarea placeholder="Describe the service you need..." rows="4" class="mt-4 w-full p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                        <textarea name="message" placeholder="Describe the service you need..." rows="4" required class="mt-4 w-full p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white"></textarea>
                         <button type="submit" class="mt-6 bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105">
                             Send My Request
                         </button>
