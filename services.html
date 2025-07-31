@@ -191,80 +191,114 @@
     |                                                              |
     ================================================================
     -->
-    <main id="services-page" style="display: block;"> <!-- Change display to block for this page -->
+    <main id="services-page" style="display: none;">
         <div class="pt-24 pb-20 bg-white">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="section-title">My Digital Marketing Services</h1>
-                <p class="section-subtitle">Solutions tailored to amplify your online presence and achieve your business goals. Each service is designed to deliver maximum impact and a clear return on investment.</p>
+                <p class="section-subtitle">A complete suite of solutions designed to build your brand, drive traffic, and convert visitors into loyal customers. Explore my areas of expertise below.</p>
             </div>
         </div>
 
-        <!-- Service Details -->
+        <!-- Accordion Service Details -->
         <div class="py-16">
-            <div class="container mx-auto px-6 space-y-16">
-                <!-- SEO Section -->
-                <div id="seo" class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <span class="text-blue-600 font-semibold">SEARCH ENGINE OPTIMIZATION</span>
-                        <h2 class="text-3xl font-bold text-slate-800 mt-2">Climb the Ranks, Drive Organic Traffic</h2>
-                        <p class="mt-4 text-slate-600">My SEO strategies are comprehensive, covering every angle to ensure your website is favored by search engines and found by your target audience. I focus on sustainable, white-hat techniques for long-term success.</p>
-                        <ul class="mt-6 space-y-3">
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>On-Page & Off-Page SEO:</strong> Optimizing content and building high-quality backlinks.</span></li>
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Technical SEO:</strong> Ensuring your site is fast, secure, and perfectly structured for crawlers.</span></li>
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>YouTube SEO:</strong> Optimizing your video content to rank higher on YouTube and Google.</span></li>
-                        </ul>
-                        <a href="contact.html" class="mt-8 cta-button inline-block">Get an SEO Quote</a>
-                    </div>
-                    <div class="p-4 bg-slate-100 rounded-xl">
-                        <img src="https://placehold.co/600x500/e2e8f0/334155?text=SEO+Illustration" class="rounded-lg shadow-lg">
-                    </div>
-                </div>
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="space-y-6">
 
-                <!-- Analytics Section -->
-                <div id="analytics" class="grid md:grid-cols-2 gap-12 items-center">
-                     <div class="p-4 bg-slate-100 rounded-xl order-last md:order-first">
-                        <img src="https://placehold.co/600x500/e2e8f0/334155?text=Analytics+Illustration" class="rounded-lg shadow-lg">
+                    <!-- Accordion Item 1: SEO -->
+                    <div id="seo" class="bg-white rounded-xl shadow-lg">
+                        <button class="accordion-button w-full flex justify-between items-center text-left p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h2 class="text-2xl font-bold text-slate-800">SEO</h2>
+                                    <p class="text-slate-500">Dominating search results to drive organic growth.</p>
+                                </div>
+                            </div>
+                            <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 pt-0">
+                                <div class="border-t border-slate-200 pt-4 grid sm:grid-cols-2 gap-x-4 gap-y-1">
+                                    <a href="contact.html?service=On-Page SEO" class="service-link">On-Page SEO</a>
+                                    <a href="contact.html?service=Off-Page SEO & Brand Mentions" class="service-link">Off-Page SEO & Brand Mentions</a>
+                                    <a href="contact.html?service=Technical SEO" class="service-link">Technical SEO</a>
+                                    <a href="contact.html?service=Analytical" class="service-link">Analytical</a>
+                                    <a href="contact.html?service=Content Strategy" class="service-link">Content Strategy</a>
+                                    <a href="contact.html?service=Other SEO Services" class="service-link">Other SEO Services</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <span class="text-green-600 font-semibold">ANALYTICS & TRACKING</span>
-                        <h2 class="text-3xl font-bold text-slate-800 mt-2">Data You Can Trust and Act On</h2>
-                        <p class="mt-4 text-slate-600">In a world of increasing data privacy, accurate tracking is non-negotiable. I implement robust server-side tracking solutions to give you a crystal-clear view of your customer journey and campaign performance.</p>
-                        <ul class="mt-6 space-y-3">
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>GA4 Server-Side Tracking:</strong> Capture complete and accurate data, bypassing browser limitations.</span></li>
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Facebook Pixel & CAPI:</strong> Maximize ad effectiveness with reliable conversion data.</span></li>
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Google Tag Manager (GTM) Mastery:</strong> Efficiently manage all your marketing tags from one central hub.</span></li>
-                        </ul>
-                         <a href="contact.html" class="mt-8 cta-button inline-block">Get a Tracking Quote</a>
-                    </div>
-                </div>
 
-                <!-- Paid Ads Section -->
-                <div id="ads" class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <span class="text-purple-600 font-semibold">PAID ADVERTISING</span>
-                        <h2 class="text-3xl font-bold text-slate-800 mt-2">High-Converting Ad Campaigns</h2>
-                        <p class="mt-4 text-slate-600">I create and manage data-driven Facebook Ads campaigns focused on one thing: generating a positive return on your ad spend. From audience research to creative testing and optimization, I handle it all.</p>
-                        <ul class="mt-6 space-y-3">
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Strategic Campaign Setup:</strong> Targeting the right audience with the right message.</span></li>
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>A/B Testing & Optimization:</strong> Continuously improving performance to lower costs and increase conversions.</span></li>
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Detailed Reporting:</strong> Clear, concise reports that show you exactly what's working.</span></li>
-                        </ul>
-                         <a href="contact.html" class="mt-8 cta-button inline-block">Get an Ads Quote</a>
+                    <!-- Accordion Item 2: Social Media -->
+                    <div id="social" class="bg-white rounded-xl shadow-lg">
+                        <button class="accordion-button w-full flex justify-between items-center text-left p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center">
+                                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h2 class="text-2xl font-bold text-slate-800">Social Media</h2>
+                                    <p class="text-slate-500">Building communities and driving engagement.</p>
+                                </div>
+                            </div>
+                            <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                             <div class="p-6 pt-0">
+                                <div class="border-t border-slate-200 pt-4 grid sm:grid-cols-2 gap-x-4 gap-y-1">
+                                    <a href="contact.html?service=Facebook Marketing" class="service-link">Facebook Marketing</a>
+                                    <a href="contact.html?service=YouTube Marketing" class="service-link">YouTube Marketing</a>
+                                    <a href="contact.html?service=Instagram Growth" class="service-link">Instagram Growth</a>
+                                    <a href="contact.html?service=LinkedIn Strategy" class="service-link">LinkedIn Strategy</a>
+                                    <a href="contact.html?service=Twitter (X) Campaigns" class="service-link">Twitter (X) Campaigns</a>
+                                    <a href="contact.html?service=Other Social Platforms" class="service-link">Other Social Platforms</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-4 bg-slate-100 rounded-xl">
-                        <img src="https://placehold.co/600x500/e2e8f0/334155?text=Paid+Ads+Illustration" class="rounded-lg shadow-lg">
+
+                    <!-- Accordion Item 3: Web Development -->
+                    <div id="web" class="bg-white rounded-xl shadow-lg">
+                        <button class="accordion-button w-full flex justify-between items-center text-left p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h2 class="text-2xl font-bold text-slate-800">Web Development & Design</h2>
+                                    <p class="text-slate-500">Crafting your digital storefront.</p>
+                                </div>
+                            </div>
+                            <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 pt-0">
+                                <div class="border-t border-slate-200 pt-4 grid sm:grid-cols-2 gap-x-4 gap-y-1">
+                                    <a href="contact.html?service=Front-End Development" class="service-link">Front-End Development</a>
+                                    <a href="contact.html?service=Back-End Development" class="service-link">Back-End Development</a>
+                                    <a href="contact.html?service=Full-Stack Development" class="service-link">Full-Stack Development</a>
+                                    <a href="contact.html?service=UI (User Interface) Design" class="service-link">UI (User Interface) Design</a>
+                                    <a href="contact.html?service=UX (User Experience) Design" class="service-link">UX (User Experience) Design</a>
+                                    <a href="contact.html?service=Other Web Services" class="service-link">Other Web Services</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
 
         <!-- Custom Service Request Section -->
-        <section class="py-20 bg-white">
+        <section class="py-20 bg-slate-50">
             <div class="container mx-auto px-6">
                 <div class="bg-blue-600 rounded-2xl p-8 md:p-12 text-center text-white">
                     <h2 class="text-3xl font-bold">Looking for a Service Not Listed?</h2>
                     <p class="mt-4 max-w-2xl mx-auto opacity-90">My expertise is broad. If you have a specific digital marketing need, I'd love to hear about it. Describe your project, and I'll let you know how I can help you achieve your goals.</p>
-                    <form action="https://formspree.io/f/xanbbdop" method="POST" class="mt-8 max-w-xl mx-auto">
+                    <form action="https://formspree.io/f/your_form_id" method="POST" class="mt-8 max-w-xl mx-auto">
                         <div class="grid sm:grid-cols-2 gap-4">
                             <input type="text" name="name" placeholder="Your Name" required class="p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white">
                             <input type="email" name="email" placeholder="Your Email" required class="p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white">
