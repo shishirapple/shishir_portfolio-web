@@ -524,7 +524,7 @@
     |                                                              |
     ================================================================
     -->
-    <script>
+     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // --- Mobile Menu Toggle ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -532,9 +532,111 @@
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
+            
+            // --- Accordion Functionality ---
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    button.classList.toggle('open');
+                    
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    } 
+                });
+            });
+
+            // --- Page Navigation & Subject Pre-selection ---
+            const pages = {
+                'index.html': document.getElementById('home-page'),
+                'services.html': document.getElementById('services-page'),
+                'about.html': document.getElementById('about-page'),
+                'contact.html': document.getElementById('contact-page'),
+            };
+
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function showPage(pageId, queryParams) {
+                const cleanPageId = pageId.split('?')[0].split('#')[0] || 'index.html';
+                
+                Object.values(pages).forEach(page => {
+                    if (page) page.style.display = 'none';
+                });
+                
+                const targetPage = pages[cleanPageId];
+                if (targetPage) {
+                    targetPage.style.display = 'block';
+                } else {
+                    if(pages['index.html']) pages['index.html'].style.display = 'block';
+                }
+
+                navLinks.forEach(link => {
+                    link.classList.remove('nav-link-active');
+                    if (link.getAttribute('href').startsWith(cleanPageId)) {
+                        link.classList.add('nav-link-active');
+                    }
+                });
+                
+                if(mobileMenu) mobileMenu.classList.add('hidden');
+                
+                if (!pageId.includes('#')) {
+                    window.scrollTo(0, 0);
+                }
+
+                // Pre-select contact form subject
+                if (cleanPageId === 'contact.html' && queryParams) {
+                    const service = queryParams.get('service');
+                    if (service) {
+                        const subjectSelect = document.getElementById('subject');
+                        if(subjectSelect) {
+                            subjectSelect.value = service;
+                        }
+                    }
+                }
+            }
+
+            document.querySelectorAll('a').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && (href.startsWith('index.html') || href.startsWith('services.html') || href.startsWith('about.html') || href.startsWith('contact.html'))) {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        // For blob URLs in iframe, we can't rely on new URL(this.href).
+                        // We will parse it manually.
+                        const [pathname, search] = this.getAttribute('href').split('?');
+                        const queryParams = new URLSearchParams(search);
+                        
+                        showPage(pathname, queryParams);
+                        
+                        const hash = this.getAttribute('href').split('#')[1];
+                        if (hash) {
+                            setTimeout(() => {
+                                const element = document.getElementById(hash);
+                                if(element) {
+                                    element.scrollIntoView({ behavior: 'smooth' });
+                                    const accordionButton = element.querySelector('.accordion-button');
+                                    if(accordionButton && !accordionButton.classList.contains('open')) {
+                                        accordionButton.click();
+                                    }
+                                }
+                            }, 100);
+                        }
+                    });
+                }
+            });
+            
+            // Initial page load logic
+            const currentPath = window.location.pathname.split("/").pop();
+            const initialPage = (currentPath === '' || !Object.keys(pages).includes(currentPath)) ? 'index.html' : currentPath;
+            const initialParams = new URLSearchParams(window.location.search);
+            showPage(initialPage, initialParams);
 
             // --- Dynamic Year for Footer ---
-            document.getElementById('year').textContent = new Date().getFullYear();
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
         });
     </script>
 
