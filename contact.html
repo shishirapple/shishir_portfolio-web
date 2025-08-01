@@ -4,33 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shishir Ahmed | Digital Marketing Expert</title>
-    <meta name="description" content="Expert Digital Marketer specializing in SEO, Server-Side Tracking (GA4 & Facebook Pixel with GTM), and high-ROI ad campaigns to drive measurable growth for your business.">
-    <meta name="keywords" content="digital marketing expert, seo specialist, ga4 server side tracking, gtm setup, facebook ads, backlink building, on-page seo, off-page seo, technical seo, youtube seo, Shishir Ahmed">
+    <meta name="description" content="Expert Digital Marketer specializing in SEO, Social Media, Web Development, and high-ROI ad campaigns to drive measurable growth for your business.">
+    <meta name="keywords" content="digital marketing expert, seo specialist, social media marketing, web development, ga4 server side tracking, gtm setup, facebook ads, backlink building, on-page seo, off-page seo, technical seo, youtube seo, Shishir Ahmed">
     <meta name="author" content="Shishir Ahmed">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Poppins & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" href="https://googleusercontent.com/file_content/4" type="image/png">
+    <link rel="icon" href="images/shishir-avatar.png" type="image/png">
 
     <style>
-       
+        /* Custom Styles */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* slate-50 */
-            color: #334155; /* slate-700 */
+            @apply bg-slate-50 text-slate-700 transition-colors duration-300;
+            font-family: 'Poppins', sans-serif;
         }
-        /* Remove @apply directives, use Tailwind classes in HTML instead */
-        /* Example: .nav-link, .nav-link-active, .cta-button, .section-title, .section-subtitle, .card */
-        /* If you want to keep custom classes, define them with regular CSS properties */
+        .font-inter {
+             font-family: 'Inter', sans-serif;
+        }
+        .nav-link {
+            @apply text-slate-600 hover:text-emerald-600 transition-colors duration-300;
+        }
+        .nav-link-active {
+            @apply text-emerald-600 font-semibold;
+        }
+        .cta-button {
+            @apply bg-emerald-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-emerald-700 transition-transform duration-300 transform hover:scale-105 shadow-lg;
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-slate-800 text-center;
+        }
+        .section-subtitle {
+            @apply mt-2 text-lg text-slate-500 text-center max-w-2xl mx-auto;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300;
+        }
+        /* Accordion Styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .accordion-button svg.arrow {
+            transition: transform 0.3s ease-in-out;
+        }
+        .accordion-button.open svg.arrow {
+            transform: rotate(180deg);
+        }
+        /* Clickable Sub-service Style */
+        .service-link {
+             @apply font-semibold text-slate-700 block p-2 rounded-md hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200;
+        }
+        /* Form Input Style */
+        .form-input {
+            @apply mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm;
+        }
     </style>
-<!-- ...existing code... -->
 </head>
 <body class="antialiased">
 
@@ -41,49 +80,48 @@
     |                                                              |
     ================================================================
     -->
-    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm font-inter">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold text-slate-800">
-                Shishir Ahmed<span class="text-blue-600">.</span>
+                Shishir Ahmed<span class="text-emerald-600">.</span>
             </a>
             <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="nav-link nav-link-active">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="services.html" class="nav-link">Services</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
-            <a href="contact.html" class="hidden md:block bg-blue-500 text-white font-semibold py-2 px-5 rounded-lg hover:bg-blue-600 transition-colors duration-300">
-                Hire Me
-            </a>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-slate-700 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
+            <div class="flex items-center">
+                <a href="contact.html" class="hidden md:block bg-emerald-500 text-white font-semibold py-2 px-5 rounded-lg hover:bg-emerald-600 transition-colors duration-300">
+                    Hire Me
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-slate-700 focus:outline-none ml-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="index.html" class="block py-2 px-6 text-sm nav-link nav-link-active">Home</a>
-            <a href="services.html" class="block py-2 px-6 text-sm nav-link">Services</a>
-            <a href="about.html" class="block py-2 px-6 text-sm nav-link">About</a>
-            <a href="contact.html" class="block py-2 px-6 text-sm nav-link">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="index.html" class="block py-3 px-6 text-base text-gray-600 hover:bg-gray-50">Home</a>
+            <a href="services.html" class="block py-3 px-6 text-base text-gray-600 hover:bg-gray-50">Services</a>
+            <a href="about.html" class="block py-3 px-6 text-base text-gray-600 hover:bg-gray-50">About</a>
+            <a href="contact.html" class="block py-3 px-6 text-base text-gray-600 hover:bg-gray-50">Contact</a>
         </div>
     </header>
 
     <!-- 
     ================================================================
-    |                                                              |
     |                   PAGE: HOME (index.html)                    |
-    |                                                              |
     ================================================================
     -->
-    <main id="home-page" style="display: none;"> <!-- Change display to none for other pages -->
-        
+    <main id="home-page" style="display: none;" class="font-inter">
         <!-- Hero Section -->
         <section class="pt-32 pb-20 bg-white">
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                 <div class="text-center md:text-left">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-800 leading-tight">
-                        Driving <span class="text-blue-600">Measurable Growth</span> with Expert SEO & Data-Driven Marketing.
+                        Driving <span class="text-emerald-600">Measurable Growth</span> with Expert SEO & Data-Driven Marketing.
                     </h1>
                     <p class="mt-6 text-lg text-slate-600 max-w-xl mx-auto md:mx-0">
                         I specialize in advanced SEO, server-side tracking with GA4, and high-ROI Facebook Ad Campaigns to elevate your brand and boost your bottom line.
@@ -96,181 +134,127 @@
                     </div>
                 </div>
                 <div class="relative">
-                     <div class="absolute inset-0 bg-blue-200 rounded-full blur-3xl opacity-40"></div>
-                    <img src="https://googleusercontent.com/file_content/1" alt="Shishir Ahmed - Digital Marketing Expert" class="relative rounded-full shadow-2xl mx-auto w-4/5 md:w-full object-cover h-full">
+                     <div class="absolute inset-0 bg-emerald-200 rounded-full blur-3xl opacity-40"></div>
+                    <img src="images/shishir-profile.png" alt="Shishir Ahmed - Digital Marketing Expert" class="relative rounded-full shadow-2xl mx-auto w-4/5 md:w-full object-cover h-full">
                 </div>
             </div>
         </section>
-
-        <!-- Highlighted Services Section -->
-        <section id="services-highlight" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title">My Core Services</h2>
-                <p class="section-subtitle">I offer a range of services designed to increase your online visibility and drive conversions.</p>
-                <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service 1: SEO -->
-                    <div class="card p-8 text-center">
-                        <div class="mx-auto bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center">
-                            <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                        </div>
-                        <h3 class="mt-6 text-xl font-bold text-slate-800">Advanced SEO</h3>
-                        <p class="mt-2 text-slate-500">Comprehensive on-page, off-page, and technical SEO to dominate search engine rankings.</p>
-                        <a href="services.html#seo" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                    </div>
-                    <!-- Service 2: Analytics -->
-                    <div class="card p-8 text-center">
-                        <div class="mx-auto bg-green-100 rounded-full w-20 h-20 flex items-center justify-center">
-                            <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                        </div>
-                        <h3 class="mt-6 text-xl font-bold text-slate-800">GA4 & GTM Server-Side Tracking</h3>
-                        <p class="mt-2 text-slate-500">Future-proof your data with accurate, server-side tracking for Facebook Pixel and GA4.</p>
-                        <a href="services.html#analytics" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                    </div>
-                    <!-- Service 3: Paid Ads -->
-                    <div class="card p-8 text-center">
-                        <div class="mx-auto bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center">
-                            <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
-                        </div>
-                        <h3 class="mt-6 text-xl font-bold text-slate-800">Facebook Ads Campaigns</h3>
-                        <p class="mt-2 text-slate-500">Strategic ad campaigns that convert, maximizing your return on investment.</p>
-                        <a href="services.html#ads" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Projects Section -->
-        <section id="projects" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title">Recent Projects & Results</h2>
-                <p class="section-subtitle">I believe in results. Here's a look at the impact I've made for my clients.</p>
-                <div class="mt-12 grid md:grid-cols-2 gap-8">
-                    <!-- Project 1: E-commerce SEO Overhaul -->
-                    <div class="card">
-                        <img src="https://googleusercontent.com/file_content/3" alt="E-commerce SEO Audit Report" class="w-full h-auto">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-slate-800">E-commerce SEO Overhaul</h3>
-                            <p class="mt-2 text-slate-500">A fashion e-commerce store was struggling with low organic traffic. I performed a full technical SEO audit and built a strategic backlink profile.</p>
-                            <div class="mt-4 bg-green-100 text-green-800 font-bold p-4 rounded-lg">
-                                Result: +150% Increase in Organic Traffic in 6 Months
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 2: Server-Side Tracking -->
-                    <div class="card">
-                        <img src="https://googleusercontent.com/file_content/2" alt="Server-Side Tracking GTM Setup" class="w-full h-auto">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-slate-800">Server-Side Tracking Implementation</h3>
-                            <p class="mt-2 text-slate-500">Implemented server-side GA4 and Facebook CAPI for a SaaS company to combat data loss from iOS14 and ad-blockers.</p>
-                            <div class="mt-4 bg-green-100 text-green-800 font-bold p-4 rounded-lg">
-                                Result: 99% Data Accuracy & 25% Lower CPA
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Me Short Section -->
-        <section class="py-20">
-            <div class="container mx-auto px-6 text-center">
-                <img src="https://googleusercontent.com/file_content/4" alt="Shishir Ahmed" class="w-32 h-32 rounded-full mx-auto shadow-xl object-cover">
-                <h2 class="mt-6 section-title">A Bit About Me</h2>
-                <p class="section-subtitle">
-                    I'm a passionate digital marketer from Rajshahi, Bangladesh, with a relentless focus on delivering tangible results. My approach combines technical expertise with creative strategy to help businesses thrive in the digital landscape.
-                </p>
-                <a href="about.html" class="mt-6 cta-button inline-block">More About Me</a>
-            </div>
-        </section>
+        <!-- Other Home page sections -->
     </main>
 
     <!-- 
     ================================================================
-    |                                                              |
     |                 PAGE: SERVICES (services.html)               |
-    |                                                              |
     ================================================================
     -->
-    <main id="services-page" style="display: none;"> <!-- Change display to block for this page -->
+    <main id="services-page" style="display: none;" class="font-inter">
         <div class="pt-24 pb-20 bg-white">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="section-title">My Digital Marketing Services</h1>
-                <p class="section-subtitle">Solutions tailored to amplify your online presence and achieve your business goals. Each service is designed to deliver maximum impact and a clear return on investment.</p>
+                <p class="section-subtitle">A complete suite of solutions designed to build your brand, drive traffic, and convert visitors into loyal customers. Explore my areas of expertise below.</p>
             </div>
         </div>
-
-        <!-- Service Details -->
+        <!-- Accordion Service Details -->
         <div class="py-16">
-            <div class="container mx-auto px-6 space-y-16">
-                <!-- SEO Section -->
-                <div id="seo" class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <span class="text-blue-600 font-semibold">SEARCH ENGINE OPTIMIZATION</span>
-                        <h2 class="text-3xl font-bold text-slate-800 mt-2">Climb the Ranks, Drive Organic Traffic</h2>
-                        <p class="mt-4 text-slate-600">My SEO strategies are comprehensive, covering every angle to ensure your website is favored by search engines and found by your target audience. I focus on sustainable, white-hat techniques for long-term success.</p>
-                        <ul class="mt-6 space-y-3">
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>On-Page & Off-Page SEO:</strong> Optimizing content and building high-quality backlinks.</span></li>
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Technical SEO:</strong> Ensuring your site is fast, secure, and perfectly structured for crawlers.</span></li>
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>YouTube SEO:</strong> Optimizing your video content to rank higher on YouTube and Google.</span></li>
-                        </ul>
-                        <a href="contact.html" class="mt-8 cta-button inline-block">Get an SEO Quote</a>
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="space-y-6">
+                    <!-- Accordion Item 1: SEO -->
+                    <div id="seo" class="bg-white rounded-xl shadow-lg">
+                        <button class="accordion-button w-full flex justify-between items-center text-left p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h2 class="text-2xl font-bold text-slate-800">SEO</h2>
+                                    <p class="text-slate-500">Dominating search results to drive organic growth.</p>
+                                </div>
+                            </div>
+                            <svg class="w-6 h-6 text-slate-500 arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 pt-0">
+                                <div class="border-t border-slate-200 pt-4 grid sm:grid-cols-2 gap-x-4 gap-y-1">
+                                    <a href="contact.html?service=On-Page SEO" class="service-link">On-Page SEO</a>
+                                    <a href="contact.html?service=Off-Page SEO & Brand Mentions" class="service-link">Off-Page SEO & Brand Mentions</a>
+                                    <a href="contact.html?service=Technical SEO" class="service-link">Technical SEO</a>
+                                    <a href="contact.html?service=Analytical" class="service-link">Analytical</a>
+                                    <a href="contact.html?service=Content Strategy" class="service-link">Content Strategy</a>
+                                    <a href="contact.html?service=Other SEO Services" class="service-link">Other SEO Services</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-4 bg-slate-100 rounded-xl">
-                        <img src="https://placehold.co/600x500/e2e8f0/334155?text=SEO+Illustration" class="rounded-lg shadow-lg">
+                    <!-- Accordion Item 2: Social Media -->
+                    <div id="social" class="bg-white rounded-xl shadow-lg">
+                        <button class="accordion-button w-full flex justify-between items-center text-left p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 w-12 h-12 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center">
+                                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h2 class="text-2xl font-bold text-slate-800">Social Media</h2>
+                                    <p class="text-slate-500">Building communities and driving engagement.</p>
+                                </div>
+                            </div>
+                            <svg class="w-6 h-6 text-slate-500 arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                             <div class="p-6 pt-0">
+                                <div class="border-t border-slate-200 pt-4 grid sm:grid-cols-2 gap-x-4 gap-y-1">
+                                    <a href="contact.html?service=Facebook Marketing" class="service-link">Facebook Marketing</a>
+                                    <a href="contact.html?service=YouTube Marketing" class="service-link">YouTube Marketing</a>
+                                    <a href="contact.html?service=Instagram Growth" class="service-link">Instagram Growth</a>
+                                    <a href="contact.html?service=LinkedIn Strategy" class="service-link">LinkedIn Strategy</a>
+                                    <a href="contact.html?service=Twitter (X) Campaigns" class="service-link">Twitter (X) Campaigns</a>
+                                    <a href="contact.html?service=Other Social Platforms" class="service-link">Other Social Platforms</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Analytics Section -->
-                <div id="analytics" class="grid md:grid-cols-2 gap-12 items-center">
-                     <div class="p-4 bg-slate-100 rounded-xl order-last md:order-first">
-                        <img src="https://placehold.co/600x500/e2e8f0/334155?text=Analytics+Illustration" class="rounded-lg shadow-lg">
-                    </div>
-                    <div>
-                        <span class="text-green-600 font-semibold">ANALYTICS & TRACKING</span>
-                        <h2 class="text-3xl font-bold text-slate-800 mt-2">Data You Can Trust and Act On</h2>
-                        <p class="mt-4 text-slate-600">In a world of increasing data privacy, accurate tracking is non-negotiable. I implement robust server-side tracking solutions to give you a crystal-clear view of your customer journey and campaign performance.</p>
-                        <ul class="mt-6 space-y-3">
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>GA4 Server-Side Tracking:</strong> Capture complete and accurate data, bypassing browser limitations.</span></li>
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Facebook Pixel & CAPI:</strong> Maximize ad effectiveness with reliable conversion data.</span></li>
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Google Tag Manager (GTM) Mastery:</strong> Efficiently manage all your marketing tags from one central hub.</span></li>
-                        </ul>
-                         <a href="contact.html" class="mt-8 cta-button inline-block">Get a Tracking Quote</a>
-                    </div>
-                </div>
-
-                <!-- Paid Ads Section -->
-                <div id="ads" class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <span class="text-purple-600 font-semibold">PAID ADVERTISING</span>
-                        <h2 class="text-3xl font-bold text-slate-800 mt-2">High-Converting Ad Campaigns</h2>
-                        <p class="mt-4 text-slate-600">I create and manage data-driven Facebook Ads campaigns focused on one thing: generating a positive return on your ad spend. From audience research to creative testing and optimization, I handle it all.</p>
-                        <ul class="mt-6 space-y-3">
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Strategic Campaign Setup:</strong> Targeting the right audience with the right message.</span></li>
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>A/B Testing & Optimization:</strong> Continuously improving performance to lower costs and increase conversions.</span></li>
-                            <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Detailed Reporting:</strong> Clear, concise reports that show you exactly what's working.</span></li>
-                        </ul>
-                         <a href="contact.html" class="mt-8 cta-button inline-block">Get an Ads Quote</a>
-                    </div>
-                    <div class="p-4 bg-slate-100 rounded-xl">
-                        <img src="https://placehold.co/600x500/e2e8f0/334155?text=Paid+Ads+Illustration" class="rounded-lg shadow-lg">
+                    <!-- Accordion Item 3: Web Development -->
+                    <div id="web" class="bg-white rounded-xl shadow-lg">
+                        <button class="accordion-button w-full flex justify-between items-center text-left p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 w-12 h-12 bg-cyan-100 text-cyan-600 rounded-lg flex items-center justify-center">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h2 class="text-2xl font-bold text-slate-800">Web Development & Design</h2>
+                                    <p class="text-slate-500">Crafting your digital storefront.</p>
+                                </div>
+                            </div>
+                            <svg class="w-6 h-6 text-slate-500 arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 pt-0">
+                                <div class="border-t border-slate-200 pt-4 grid sm:grid-cols-2 gap-x-4 gap-y-1">
+                                    <a href="contact.html?service=Front-End Development" class="service-link">Front-End Development</a>
+                                    <a href="contact.html?service=Back-End Development" class="service-link">Back-End Development</a>
+                                    <a href="contact.html?service=Full-Stack Development" class="service-link">Full-Stack Development</a>
+                                    <a href="contact.html?service=UI (User Interface) Design" class="service-link">UI (User Interface) Design</a>
+                                    <a href="contact.html?service=UX (User Experience) Design" class="service-link">UX (User Experience) Design</a>
+                                    <a href="contact.html?service=Other Web Services" class="service-link">Other Web Services</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Custom Service Request Section -->
-        <section class="py-20 bg-white">
+        <section class="py-20 bg-slate-50">
             <div class="container mx-auto px-6">
-                <div class="bg-blue-600 rounded-2xl p-8 md:p-12 text-center text-white">
+                <div class="bg-emerald-600 rounded-2xl p-8 md:p-12 text-center text-white">
                     <h2 class="text-3xl font-bold">Looking for a Service Not Listed?</h2>
                     <p class="mt-4 max-w-2xl mx-auto opacity-90">My expertise is broad. If you have a specific digital marketing need, I'd love to hear about it. Describe your project, and I'll let you know how I can help you achieve your goals.</p>
-                    <form class="mt-8 max-w-xl mx-auto">
+                    <form action="https://formspree.io/f/xyzppvva" method="POST" class="mt-8 max-w-xl mx-auto">
                         <div class="grid sm:grid-cols-2 gap-4">
-                            <input type="text" placeholder="Your Name" class="p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white">
-                            <input type="email" placeholder="Your Email" class="p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                            <input type="text" name="name" placeholder="Your Name" required class="p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                            <input type="email" name="email" placeholder="Your Email" required class="p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white">
                         </div>
-                        <textarea placeholder="Describe the service you need..." rows="4" class="mt-4 w-full p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white"></textarea>
-                        <button type="submit" class="mt-6 bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105">
+                        <textarea name="message" placeholder="Describe the service you need..." rows="4" required class="mt-4 w-full p-3 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                        <button type="submit" class="mt-6 bg-white text-emerald-600 font-bold py-3 px-8 rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105">
                             Send My Request
                         </button>
                     </form>
@@ -281,16 +265,14 @@
 
     <!-- 
     ================================================================
-    |                                                              |
     |                   PAGE: ABOUT (about.html)                   |
-    |                                                              |
     ================================================================
     -->
-    <main id="about-page" style="display: none;"> <!-- Change display to block for this page -->
+    <main id="about-page" style="display: none;" class="font-inter">
         <div class="pt-32 pb-20 bg-white">
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <span class="text-blue-600 font-semibold">ABOUT ME</span>
+                    <span class="text-emerald-600 font-semibold">ABOUT ME</span>
                     <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800 mt-2">My Journey to Becoming a Data-Driven Marketer</h1>
                     <p class="mt-6 text-lg text-slate-600">
                         Hello! I'm Shishir Ahmed, a digital marketing professional based in Rajshahi, Bangladesh. My journey into the world of digital marketing began with a fascination for how data could tell a story and drive real business decisions. I quickly realized that the most successful marketing wasn't about guesswork; it was about understanding user behavior, precise targeting, and relentless optimization.
@@ -301,46 +283,11 @@
                 </div>
                 <div class="relative">
                     <div class="absolute -top-4 -right-4 w-full h-full bg-slate-200 rounded-2xl transform rotate-3"></div>
-                    <img src="https://googleusercontent.com/file_content/1" alt="Shishir Ahmed Professional Photo" class="relative rounded-2xl shadow-2xl w-full object-cover h-full">
+                    <img src="images/shishir-profile.png" alt="Shishir Ahmed Professional Photo" class="relative rounded-2xl shadow-2xl w-full object-cover h-full">
                 </div>
             </div>
         </div>
-
-        <!-- Skills & Expertise Section -->
-        <section class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title">My Toolkit & Expertise</h2>
-                <p class="section-subtitle">I leverage industry-leading tools and platforms to deliver top-tier results.</p>
-                <div class="mt-12 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
-                    <div class="p-4 bg-white rounded-lg shadow-md">
-                        <p class="font-bold text-slate-700">Google Analytics</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-lg shadow-md">
-                        <p class="font-bold text-slate-700">Google Tag Manager</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-lg shadow-md">
-                        <p class="font-bold text-slate-700">Google Search Console</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-lg shadow-md">
-                        <p class="font-bold text-slate-700">Facebook Ads Manager</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-lg shadow-md">
-                        <p class="font-bold text-slate-700">Ahrefs / SEMrush</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-lg shadow-md">
-                        <p class="font-bold text-slate-700">Server-Side Tagging</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-lg shadow-md">
-                        <p class="font-bold text-slate-700">WordPress</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-lg shadow-md">
-                        <p class="font-bold text-slate-700">Technical SEO Audits</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action Section -->
+        <!-- Other about page sections -->
         <section class="py-20 bg-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold text-slate-800">Ready to achieve your goals?</h2>
@@ -352,87 +299,82 @@
 
     <!-- 
     ================================================================
-    |                                                              |
     |                 PAGE: CONTACT (contact.html)                 |
-    |                                                              |
     ================================================================
     -->
     <main id="contact-page" style="display: none;">
-        <div class="pt-24 pb-20 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="section-title">Get In Touch</h1>
-                <p class="section-subtitle">Have a project in mind or just want to say hello? I'd love to hear from you. Fill out the form below or reach out via email or social media.</p>
-            </div>
-        </div>
-
-        <section class="pb-20">
-            <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
-                <!-- Contact Info -->
-                <div class="md:col-span-1 space-y-8">
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-bold text-slate-800">Email</h3>
-                            <p class="text-slate-500">For project inquiries & collaborations.</p>
-                            <a href="mailto:seoexpertshishir.ahmed@gmail.com" class="text-blue-600 font-semibold hover:underline">seoexpertshishir.ahmed@gmail.com</a>
-                        </div>
-                    </div>
-                     <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
-                           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-bold text-slate-800">Phone</h3>
-                            <p class="text-slate-500">Available during business hours.</p>
-                            <a href="tel:+8801723620982" class="text-blue-600 font-semibold hover:underline">+8801723620982</a>
-                        </div>
-                    </div>
-                     <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
-                           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-bold text-slate-800">Location</h3>
-                            <p class="text-slate-500">Rajshahi, Bangladesh</p>
-                        </div>
-                    </div>
-                     <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
-                           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
-                        </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-bold text-slate-800">Socials</h3>
-                            <div class="flex space-x-4 mt-2">
-                                <a href="https://www.linkedin.com/in/seoexpertshishir/" target="_blank" class="text-slate-500 hover:text-blue-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><title>LinkedIn</title><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
-                                <a href="https://www.facebook.com/seoexpertshishir2025" target="_blank" class="text-slate-500 hover:text-blue-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><title>Facebook</title><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"></path></svg></a>
-                                <a href="https://x.com/seoexpershishir" target="_blank" class="text-slate-500 hover:text-blue-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><title>X</title><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.21-6.815-6.043 6.815h-3.308l7.73-8.805-7.995-10.695h6.836l4.554 6.103 5.59-6.103zm-1.456 18.43h2.29l-9.922-13.38h-2.45l10.082 13.38z"></path></svg></a>
-                                <a href="https://www.instagram.com/seoexpertshishir/" target="_blank" class="text-slate-500 hover:text-blue-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><title>Instagram</title><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.058-1.689-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path></svg></a>
-                            </div>
-                        </div>
-                    </div>
+        <div class="container mx-auto px-4 pt-24">
+            <div class="mt-10 mb-20">
+                <div class="text-center mb-12">
+                    <p class="text-sm text-emerald-500 font-semibold">Get In Touch</p>
+                    <h2 class="text-3xl font-bold text-gray-800 mt-2">Have a project in mind or just want to say hello?</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">I'd love to hear from you. Fill out the form below or reach out via email or social media.</p>
                 </div>
-
-                <!-- Contact Form -->
-                <div class="md:col-span-2 bg-white p-8 rounded-2xl shadow-xl">
-                    <form action="https://formspree.io/f/your_form_id" method="POST">
-                        <div class="grid sm:grid-cols-2 gap-6">
-                            <div>
-                                <label for="first-name" class="block text-sm font-semibold text-slate-700">First Name</label>
-                                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3" required>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="md:col-span-1 space-y-8">
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-3 rounded-full">
+                                <span class="material-icons text-emerald-500">email</span>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-800">Email</h3>
+                                <p class="text-gray-600">For project inquiries & collaborations.</p>
+                                <a class="text-emerald-500 hover:underline" href="mailto:seoexpertshishir.ahmed@gmail.com">seoexpertshishir.ahmed@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-3 rounded-full">
+                                <span class="material-icons text-emerald-500">phone</span>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-800">Phone</h3>
+                                <p class="text-gray-600">Available during business hours.</p>
+                                <a class="text-emerald-500 hover:underline" href="tel:+8801723620982">+8801723620982</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-3 rounded-full">
+                                <span class="material-icons text-emerald-500">location_on</span>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-800">Location</h3>
+                                <p class="text-gray-600">Rajshahi, Bangladesh</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-3 rounded-full">
+                                <span class="material-icons text-emerald-500">group</span>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-800">Socials</h3>
+                                <div class="flex space-x-4 mt-2">
+                                    <a href="https://www.linkedin.com/in/seoexpertshishir/" target="_blank" class="text-gray-500 hover:text-gray-800"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><title>LinkedIn</title><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+                                    <a href="https://www.facebook.com/seoexpertshishir2025" target="_blank" class="text-gray-500 hover:text-gray-800"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><title>Facebook</title><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"></path></svg></a>
+                                    <a href="https://x.com/seoexpershishir" target="_blank" class="text-gray-500 hover:text-gray-800"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><title>X</title><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.21-6.815-6.043 6.815h-3.308l7.73-8.805-7.995-10.695h6.836l4.554 6.103 5.59-6.103zm-1.456 18.43h2.29l-9.922-13.38h-2.45l10.082 13.38z"></path></svg></a>
+                                    <a href="https://www.instagram.com/seoexpertshishir/" target="_blank" class="text-gray-500 hover:text-gray-800"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><title>Instagram</title><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0 1.8c-3.141 0-3.51.012-4.734.069-2.738.125-3.967 1.354-4.092 4.092-.057 1.224-.069 1.594-.069 4.734s.012 3.51.069 4.734c.125 2.738 1.354 3.967 4.092 4.092 1.224.057 1.594.069 4.734.069s3.51-.012 4.734-.069c2.738-.125 3.967-1.354 4.092-4.092.057-1.224.069-1.594.069-4.734s-.012-3.51-.069-4.734c-.125-2.738-1.354-3.967-4.092-4.092-1.224-.057-1.594-.069-4.734-.069zm0 5.838a5 5 0 100 10 5 5 0 000-10zm0 8.138a3.138 3.138 0 110-6.276 3.138 3.138 0 010 6.276zm4.905-9.338a1.162 1.162 0 100-2.324 1.162 1.162 0 000 2.324z"></path></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 bg-white p-8 rounded-xl shadow-lg">
+                        <form id="contact-form" action="https://formspree.io/f/xyzppvva" class="space-y-6" method="POST">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700" for="first-name">First Name</label>
+                                    <input class="form-input" id="first-name" name="first-name" type="text" placeholder="John" required/>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700" for="last-name">Last Name</label>
+                                    <input class="form-input" id="last-name" name="last-name" type="text" placeholder="Doe" required/>
+                                </div>
                             </div>
                             <div>
-                                <label for="last-name" class="block text-sm font-semibold text-slate-700">Last Name</label>
-                                <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3" required>
+                                <label class="block text-sm font-medium text-gray-700" for="email">Email</label>
+                                <input class="form-input" id="email" name="email" type="email" placeholder="you@example.com" required/>
                             </div>
-                            <div class="sm:col-span-2">
-                                <label for="email" class="block text-sm font-semibold text-slate-700">Email</label>
-                                <input type="email" name="email" id="email" autocomplete="email" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3" required>
-                            </div>
-                             <div class="sm:col-span-2">
-                                <label for="subject" class="block text-sm font-semibold text-slate-700">Subject</label>
-                                <select id="subject" name="subject" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700" for="subject">Subject</label>
+                                <select class="form-input" id="subject" name="subject">
                                     <option>General Question</option>
                                     <optgroup label="SEO Services">
                                         <option>On-Page SEO</option>
@@ -464,40 +406,58 @@
                                 <label for="message" class="block text-sm font-semibold text-slate-700">Message</label>
                                 <textarea name="message" id="message" rows="4" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3" required></textarea>
                             </div>
-                        </div>
-                        <div class="mt-8 text-right">
-                            <button type="submit" class="cta-button w-full sm:w-auto">
-                                Send Message
-                            </button>
-                        </div>
-                         <p class="mt-4 text-sm text-slate-500 text-center">Thank you for your message. I will respond within 24 business hours.</p>
-                    </form>
+                            <div class="text-center pt-2">
+                                <button class="w-full md:w-auto inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-base font-medium rounded-lg text-white bg-emerald-500 hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-colors" type="submit">
+                                    Send Message
+                                </button>
+                            </div>
+                            <p class="text-xs text-gray-500 text-center !mt-4">Thank you for your message. I will respond within 24 business hours.</p>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </main>
+    
+    <!-- 
+    ================================================================
+    |                 PAGE: THANK YOU (thank-you.html)             |
+    ================================================================
+    -->
+    <main id="thank-you-page" style="display: none;">
+        <div class="min-h-screen flex items-center justify-center">
+            <div class="text-center p-8 bg-white rounded-xl shadow-2xl max-w-lg mx-auto">
+                <div class="mx-auto w-24 h-24 flex items-center justify-center bg-emerald-100 rounded-full">
+                    <svg class="w-16 h-16 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <h1 class="mt-6 text-3xl font-bold text-slate-800">Thank You!</h1>
+                <p class="mt-4 text-lg text-slate-600">Your message has been sent successfully. I will get back to you within 24 business hours.</p>
+                <div class="mt-8">
+                    <a href="index.html" id="return-home-button" class="cta-button">Return to Home</a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- 
     ================================================================
-    |                                                              |
     |                         FOOTER                               |
-    |                                                              |
     ================================================================
     -->
-    <footer class="bg-slate-800 text-slate-300">
+    <footer class="bg-slate-800 text-slate-300 font-inter">
         <div class="container mx-auto px-6 py-12">
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold text-white">Shishir Ahmed<span class="text-blue-500">.</span></h3>
+                    <h3 class="text-xl font-bold text-white">Shishir Ahmed<span class="text-emerald-500">.</span></h3>
                     <p class="mt-2 text-slate-400">Data-driven digital marketing expert committed to growing your business.</p>
                 </div>
                 <div>
                     <h3 class="font-semibold text-white">Quick Links</h3>
                     <ul class="mt-4 space-y-2">
-                        <li><a href="index.html" class="hover:text-blue-400 transition-colors">Home</a></li>
-                        <li><a href="services.html" class="hover:text-blue-400 transition-colors">Services</a></li>
-                        <li><a href="about.html" class="hover:text-blue-400 transition-colors">About</a></li>
-                        <li><a href="contact.html" class="hover:text-blue-400 transition-colors">Contact</a></li>
+                        <li><a href="index.html" class="hover:text-emerald-400 transition-colors">Home</a></li>
+                        <li><a href="services.html" class="hover:text-emerald-400 transition-colors">Services</a></li>
+                        <li><a href="about.html" class="hover:text-emerald-400 transition-colors">About</a></li>
+                        <li><a href="contact.html" class="hover:text-emerald-400 transition-colors">Contact</a></li>
                     </ul>
                 </div>
                 <div>
@@ -524,7 +484,7 @@
     |                                                              |
     ================================================================
     -->
-     <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             // --- Mobile Menu Toggle ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -548,12 +508,13 @@
                 });
             });
 
-            // --- Page Navigation & Subject Pre-selection ---
+            // --- Page Navigation & Form Handling ---
             const pages = {
                 'index.html': document.getElementById('home-page'),
                 'services.html': document.getElementById('services-page'),
                 'about.html': document.getElementById('about-page'),
                 'contact.html': document.getElementById('contact-page'),
+                'thank-you.html': document.getElementById('thank-you-page')
             };
 
             const navLinks = document.querySelectorAll('.nav-link');
@@ -602,14 +563,11 @@
                 if (href && (href.startsWith('index.html') || href.startsWith('services.html') || href.startsWith('about.html') || href.startsWith('contact.html'))) {
                     link.addEventListener('click', function(e) {
                         e.preventDefault();
-                        // For blob URLs in iframe, we can't rely on new URL(this.href).
-                        // We will parse it manually.
-                        const [pathname, search] = this.getAttribute('href').split('?');
+                        const [pathname, search] = link.getAttribute('href').split('?');
                         const queryParams = new URLSearchParams(search);
-                        
                         showPage(pathname, queryParams);
                         
-                        const hash = this.getAttribute('href').split('#')[1];
+                        const hash = link.getAttribute('href').split('#')[1];
                         if (hash) {
                             setTimeout(() => {
                                 const element = document.getElementById(hash);
@@ -626,7 +584,30 @@
                 }
             });
             
-            // Initial page load logic
+            // --- Form Submission ---
+            const contactForm = document.getElementById('contact-form');
+            if(contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const formData = new FormData(this);
+                    fetch(this.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    }).then(response => {
+                        if (response.ok) {
+                            this.reset();
+                            showPage('thank-you.html');
+                        } else {
+                            alert('Oops! There was a problem submitting your form.');
+                        }
+                    }).catch(error => {
+                         alert('Oops! There was a problem submitting your form.');
+                    });
+                });
+            }
+            
+            // --- Initial page load logic ---
             const currentPath = window.location.pathname.split("/").pop();
             const initialPage = (currentPath === '' || !Object.keys(pages).includes(currentPath)) ? 'index.html' : currentPath;
             const initialParams = new URLSearchParams(window.location.search);
